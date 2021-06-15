@@ -19,11 +19,16 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  
 
-  /* bungee fonts link for nav.css */
-  /* font-family: 'Bungee', cursive; */
 }
 
+main {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  background-color: inherit;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
