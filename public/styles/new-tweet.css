@@ -37,3 +37,7 @@ textarea {
   padding: 3px 8px;
   align-items: center;
 }
+
+.negative {
+  color: red;
+}
