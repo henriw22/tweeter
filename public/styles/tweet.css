@@ -1,9 +1,5 @@
 article.tweet {
-  /* display: flex; */
   width: 100%;
-  /* flex-direction: column; */
-  /* border-top: black;
-  border-width: 3px; */
   border: 3px solid rgb(118, 118, 118);
   margin-bottom: 20px;
 }
@@ -42,12 +38,12 @@ article.tweet footer {
   justify-content: space-between;
 }
 
-span.avatar {
+span.name {
   display: flex;
   align-items: center;
 }
 
-span.avatar span {
+span.name span {
   margin-left: 10px;
 }
 
@@ -61,4 +57,8 @@ span.symbol {
 
 .hover:hover {
   color:goldenrod;
+}
+
+span.handle {
+  color:rgb(175, 175, 175);
 }
