@@ -29,6 +29,8 @@ main {
   margin: auto;
   background-color: inherit;
   flex-direction: column;
+  position: relative;
+  top: 120px;
 }
 
 /*

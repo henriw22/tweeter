@@ -16,6 +16,7 @@ article.tweet header {
   height: 100px;
   align-items: center;
   justify-content: space-between;
+  position:static;
 }
 
 article.tweet p {

@@ -6,4 +6,6 @@ header {
   width: 100%;
   background-color:wheat;
   background-image: url("../images/argyle.png");
+  position: relative;
+  top:120px;
 }
