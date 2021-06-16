@@ -19,3 +19,12 @@ $(document).ready(function() {
   });
 
 });
+
+
+// $(document).ready(function() {
+//   const timeElement = $(".time");
+//   const time = timeElement.data("time");
+//   const timeago = timeago.format(time);
+//   timeElement.text(timeago);
+
+// }

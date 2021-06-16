@@ -28,6 +28,7 @@ main {
   width: 90%;
   margin: auto;
   background-color: inherit;
+  flex-direction: column;
 }
 
 /*
