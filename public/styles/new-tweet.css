@@ -43,3 +43,33 @@ textarea {
 .negative {
   color: red;
 }
+
+#error1 {
+  display: none;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  background-color: inherit;
+  border: solid 3px red;
+  color:red;
+}
+
+#error1 .fa {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+#error2 {
+  display: none;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  background-color: inherit;
+  border: solid 3px red;
+  color:red;
+}
+
+#error2 .fa {
+  margin-right: 25px;
+  margin-left: 25px;
+}

@@ -23,9 +23,10 @@ article.tweet header {
 article.tweet p {
   display: flex;
   width: 95%;
-  height: 75px;
+  height: auto;
   align-items: center;
   margin: auto;
+  padding-bottom: 10px;
   border-bottom: 3px solid rgb(118, 118, 118);
 }
 

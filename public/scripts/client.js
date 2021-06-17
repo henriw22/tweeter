@@ -7,6 +7,12 @@
 
 $(() => {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = (data) => {
     const name = data.user.name;
     const avatar = data.user.avatars;
@@ -20,7 +26,7 @@ $(() => {
           <span class="name"><img src="${avatar}"><span>${name}</span></span>
           <span class="handle">${handle}</span>
         </header>
-        <p><b>${content}</b></p>
+        <p><b>${escape(content)}</b></p>
         <footer>
           <span>${time}</span>
           <!-- <span class=‘time’ data-time=“1623621475652”></span> -->
@@ -29,7 +35,6 @@ $(() => {
       </article>
     `);
 
-    console.log('tweet:', $tweet);
     return $tweet;
   };
 
@@ -44,28 +49,27 @@ $(() => {
 
   $("form").submit(function (event) {
     event.preventDefault();
+    $("#error1").slideUp("fast");
+    $("#error2").slideUp("fast");
     const data = $('form').serialize();
     const test = $('#tweet-text').val().trim().length;
     
     if (test === 0) {
-      return alert('Please type your tweet');
-    } 
-    if (test > 140) {
-      return alert('Your tweet is too long!')
-    } 
-    
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data: data
-    })
-    .then((result) => {
-      console.log(result);
-      renderTweets(result);
-      $('#tweet-text').val('');
-      $('.counter').text('140');
-    })
-    
+      $("#error1").slideDown("fast");
+    } else if (test > 140) {
+      $("#error2").slideDown("fast");
+    } else {
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: data
+      })
+      .then((result) => {
+        renderTweets(result);
+        $('#tweet-text').val('');
+        $('.counter').text('140');
+      })
+    }
 
   });
 
