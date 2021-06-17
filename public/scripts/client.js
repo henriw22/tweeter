@@ -29,7 +29,6 @@ $(() => {
       </article>
     `);
 
-
     console.log('tweet:', $tweet);
     return $tweet;
   };
@@ -38,7 +37,7 @@ $(() => {
   const renderTweets = (datas) => {
     for (let data of datas) {
       let $tweet = createTweetElement(data);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   };
 
@@ -47,31 +46,33 @@ $(() => {
     event.preventDefault();
     const data = $('form').serialize();
     const test = $('#tweet-text').val().trim().length;
-
+    
     if (test === 0) {
       return alert('Please type your tweet');
     } 
     if (test > 140) {
       return alert('Your tweet is too long!')
     } 
-
+    
     $.ajax({
-      url: "/tweets/",
-      metod: "POST",
+      url: "/tweets",
+      method: "POST",
       data: data
-    });
-    // .then ((result) => {
-    //   alert('test');
-    // })
-  
-    console.log('test');
+    })
+    .then((result) => {
+      console.log(result);
+      renderTweets(result);
+      $('#tweet-text').val('');
+      $('.counter').text('140');
+    })
+    
 
   });
 
 
 
   const loadTweets = () => {
-    $.ajax('/tweets/', {METHOD: 'GET'})
+    $.ajax('/tweets', {METHOD: 'GET'})
     .then((result) => {
       renderTweets(result);
     });
