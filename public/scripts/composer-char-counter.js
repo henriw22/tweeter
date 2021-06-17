@@ -5,7 +5,7 @@ $(document).ready(function() {
     const $textArea = $(this);
     const $form = $textArea.closest('form');
     const $counter = $form.find('.counter');
-    const charLeft = 140 - $textArea.val().length;
+    const charLeft = 140 - $textArea.val().trim().length;
     
     $counter.val(charLeft);
 

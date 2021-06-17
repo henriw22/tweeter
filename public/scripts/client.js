@@ -46,12 +46,24 @@ $(() => {
   $("form").submit(function (event) {
     event.preventDefault();
     const data = $('form').serialize();
+    const test = $('#tweet-text').val().trim().length;
+
+    if (test === 0) {
+      return alert('Please type your tweet');
+    } 
+    if (test > 140) {
+      return alert('Your tweet is too long!')
+    } 
 
     $.ajax({
       url: "/tweets/",
       metod: "POST",
       data: data
     });
+    // .then ((result) => {
+    //   alert('test');
+    // })
+  
     console.log('test');
 
   });
