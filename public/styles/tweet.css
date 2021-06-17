@@ -28,6 +28,8 @@ article.tweet p {
   margin: auto;
   padding-bottom: 10px;
   border-bottom: 3px solid rgb(118, 118, 118);
+  word-break: break-word;
+  overflow: auto;
 }
 
 article.tweet footer {
