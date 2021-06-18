@@ -1,7 +1,8 @@
 article.tweet {
   width: 100%;
   border: 3px solid rgb(118, 118, 118);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  margin-top:25px;
 }
 
 .boxhover:hover {

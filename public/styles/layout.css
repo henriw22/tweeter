@@ -37,7 +37,35 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-
  @media only screen and (min-width: 1024px) {
-   
+  
+  #desktop {
+    display: flex;
+    align-content:flex-start;
+  }
+  
+  main {
+     width: 50%;
+     position:unset;
+     margin-top: 75px;
+   }
+}
+
+#reset {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
+  border: 0px;
+  background-color: red;
+  color: #FFFFFF;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+#reset .fa {
+  font-weight: bold;
 }

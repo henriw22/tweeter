@@ -85,4 +85,32 @@ $(() => {
 
   loadTweets();
 
+  let writeTweet = false;
+  $('.write').click(() => {
+    if (writeTweet) {
+      $('.new-tweet').slideUp("fast");
+      writeTweet = false;
+    } else {
+      $('.new-tweet').slideDown("fast");
+      $('#tweet-text').focus();
+      writeTweet = true;
+    }
+  })
+
+  $('#reset').click(() => {
+    $(window).scrollTop(0);
+    $('.new-tweet').slideDown("fast");
+    $('#tweet-text').focus();
+    writeTweet = true;
+  })
+
+  $(window).scroll(() => {
+    if ($(window).scrollTop() > 200) {
+      $('#reset').show();
+      $('.write').hide();
+    } else {
+      $('#reset').hide();
+      $('.write').show();
+    }
+  })
 });

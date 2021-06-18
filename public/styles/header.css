@@ -4,15 +4,22 @@ header {
   align-items: center;
   height: 400px;
   width: 100%;
-  background-color: bisque;
-  background-image: url("../images/argyle.png");
+  background-color: lightcoral;
+  background-image: url("../images/fake-luxury.png");
   position: relative;
+  margin-bottom: 50px;
   top: 120px;
 }
 
 h2.name {
-  color: rgb(50, 50, 50);
+  color: #FFFFFF;
 }
+
+h2.name span {
+  font-weight:normal;
+}
+
+
 
 
 @media only screen and (min-width: 1024px) {
@@ -20,8 +27,11 @@ h2.name {
   header {
     width: 35%;
     top:unset;
-    margin: 5%;
+    margin-left: 5%;
+    margin-top: 75px;
     justify-content:center;
+    background-color: lightcoral;
+
   }
   
 
