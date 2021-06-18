@@ -11,6 +11,14 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Task List
+1. Using Ajax to simulate real time tweet submission and displaying them almost simultaneously.
+2. Finished the basic functionality required for the app.
+3. Added responsive design feature to adapt the app for desktop view.
+4. Prevent cross site scripting feature.
+5. Finished the stretch part of the project on toggling button to display text area input.
+
+
 ## Dependencies
 
 - Express
