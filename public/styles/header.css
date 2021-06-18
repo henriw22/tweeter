@@ -4,8 +4,26 @@ header {
   align-items: center;
   height: 400px;
   width: 100%;
-  background-color:wheat;
+  background-color: bisque;
   background-image: url("../images/argyle.png");
   position: relative;
-  top:120px;
+  top: 120px;
+}
+
+h2.name {
+  color: rgb(50, 50, 50);
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+  header {
+    width: 35%;
+    top:unset;
+    margin: 5%;
+    justify-content:center;
+  }
+  
+
+  
 }
