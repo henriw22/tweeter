@@ -18,6 +18,10 @@ This repository is the starter code for the project: Students will fork and clon
 4. Prevent cross site scripting feature.
 5. Finished the stretch part of the project on toggling button to display text area input.
 
+## Screenshots
+!["Screenshot of the mobile view"](https://github.com/henriw22/tweeter/blob/master/docs/Tablet-view.png?raw=true)
+!["Screenshot of the desktop view"](https://github.com/henriw22/tweeter/blob/master/docs/Desktop-view.png?raw=true)
+!["Screenshot of tweets list"](https://github.com/henriw22/tweeter/blob/master/docs/Tweets-list.png?raw=true)
 
 ## Dependencies
 
