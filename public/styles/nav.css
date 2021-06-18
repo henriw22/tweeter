@@ -1,3 +1,5 @@
+/* css for navigation display */
+
 nav {
   display: flex;
   height: 120px;
@@ -38,7 +40,7 @@ nav span {
 
 .arrow {
   color: red;
-  font-size: 5vw;
+  font-size: 40px;
   animation: bounce 0.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -50,6 +52,7 @@ nav span {
 }
 
 
+ /* responsive design for desktop breakpoint*/
 @media only screen and (min-width: 1024px) {
 
   nav {

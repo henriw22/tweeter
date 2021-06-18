@@ -6,13 +6,14 @@
 
 
 $(() => {
-
-  const escape = function (str) {
+  // function to prevent cross site scripting
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // creating a tweet box template
   const createTweetElement = (data) => {
     const name = data.user.name;
     const avatar = data.user.avatars;
@@ -39,7 +40,7 @@ $(() => {
     return $tweet;
   };
 
-
+  // creating the tweet elements by using the template
   const renderTweets = (datas) => {
     for (let data of datas) {
       let $tweet = createTweetElement(data);
@@ -47,8 +48,8 @@ $(() => {
     }
   };
 
-
-  $("form").submit(function (event) {
+  // handler on the tweet submit button to create a new tweet
+  $("form").submit(function(event) {
     event.preventDefault();
     $("#error1").slideUp("fast");
     $("#error2").slideUp("fast");
@@ -75,7 +76,7 @@ $(() => {
   });
 
 
-
+// function to load the saved tweets on the database
   const loadTweets = () => {
     $.ajax('/tweets', {METHOD: 'GET'})
     .then((result) => {
@@ -85,6 +86,8 @@ $(() => {
 
   loadTweets();
 
+
+// Stretch part for the double down toggle button
   let writeTweet = false;
   $('.write').click(() => {
     if (writeTweet) {
@@ -95,14 +98,14 @@ $(() => {
       $('#tweet-text').focus();
       writeTweet = true;
     }
-  })
+  });
 
   $('#reset').click(() => {
     $(window).scrollTop(0);
     $('.new-tweet').slideDown("fast");
     $('#tweet-text').focus();
     writeTweet = true;
-  })
+  });
 
   $(window).scroll(() => {
     if ($(window).scrollTop() > 200) {
@@ -112,5 +115,5 @@ $(() => {
       $('#reset').hide();
       $('.write').show();
     }
-  })
+  });
 });

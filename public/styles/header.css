@@ -1,3 +1,5 @@
+/* css for header display */
+
 header {
   display: flex;
   flex-direction: column;
@@ -20,7 +22,7 @@ h2.name span {
 }
 
 
-
+ /* responsive design for desktop breakpoint*/
 
 @media only screen and (min-width: 1024px) {
 

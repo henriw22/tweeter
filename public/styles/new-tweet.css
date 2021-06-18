@@ -1,9 +1,10 @@
+/* css for new tweet submission display */
+
 .new-tweet {
   display: none;
   width: 100%;
   flex-direction: column;
   margin-bottom: 30px;
-  /* justify-content: space-evenly; */
 }
 
 .form {
@@ -44,6 +45,13 @@ textarea {
   color: red;
 }
 
+::placeholder {
+  font-size:inherit;
+  font-weight: bold;
+}
+
+
+/* error handling css to display slidedown and slideup */
 #error1 {
   display: none;
   padding: 5px;
@@ -72,9 +80,4 @@ textarea {
 #error2 .fa {
   margin-right: 25px;
   margin-left: 25px;
-}
-
-::placeholder {
-  font-size:inherit;
-  font-weight: bold;
 }

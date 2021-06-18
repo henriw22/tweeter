@@ -33,10 +33,8 @@ main {
   top: 120px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
+ 
+ /* responsive design for desktop breakpoint*/
  @media only screen and (min-width: 1024px) {
   
   #desktop {
